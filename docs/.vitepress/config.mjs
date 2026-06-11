@@ -179,6 +179,13 @@ export default defineConfig({
                                     { text: 'Firmware Update', link: '/event-firmware-update' },
                                 ]
                             },
+                            {
+                                text: 'Quad Viewer', link: '/quad-viewer-introduction',
+                                collapsed: true,
+                                items: [
+                                    { text: 'Operation', link: '/quad-viewer-operation' },
+                                ]
+                            },
                         ]
                     },
                     {
