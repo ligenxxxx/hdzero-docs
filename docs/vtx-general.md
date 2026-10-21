@@ -1,4 +1,4 @@
-# General Considerations
+# Getting Started
 ## Update VTX Firmware
 
 Please update VTX firmware to the latest version to ensure compatibility with the latest cameras, flight controller software, and video receivers. It is not required for VTX firmware version to match video receiver version, but it is recommended. See [firmware update instructions](vtx-firmware-update.md) below.
@@ -147,13 +147,9 @@ The desired RF power level is selectable between 25mW, 200mW (and 500mW or MAX f
 
 - OFF: The output RF power will be set to POWER setting.
 
-- P1MW: The output RF power will be 0.1mW (in order to not interfere with other pilots) in this mode. If the aircraft is armed, RF output power will be automatically set to the POWER within seconds.
+- P1MW: The output RF power will be 0.1mW (in order to not interfere with other pilots) in this mode. Exit using the VTX menu.
 
-- 0MW: There will be zero RF output in this mode. If aircraft is armed, RF output power will be automatically set to POWER within seconds.
-
-::: tip
-Note that after first arm, the vtx will not enter pit mode again until vbat power is reset
-:::
+- 0MW: There will be zero RF output in this mode. Exit using the radio shortcut or via the VTX menu.
 
 ### LP_MODE:  (Set to ‘OFF’ if you don’t know how it works)
 
@@ -169,7 +165,7 @@ Note that after first arm, the vtx will not enter LP mode again until vbat power
 
 ### OFFSET_25MW: (Set to ‘0’ if you don’t know how it works)
 
-It is to fine tune the RF output power to be exactly 25mW. The range is [-10:10], and step size is about 0.1dB per step.
+It is to fine tune the RF output power to be exactly 25mW. The range is [-10:10], and step size is about 0.25dBm per step.
 
 ### TEAM_RACE: (Set to ‘OFF’ if you don’t know how it works)
 
@@ -186,7 +182,7 @@ Two different stick commands are provided for switching or exiting 0mW. See the 
 ::: tip
 Notes:
 
-- HDZero VTX will still become hot even on P1mW mode. It is better to keep VTX on 0mW when it will be idle for a while. Though the receiver will not have live video on this mode, it will come back as soon as the aircraft is armed.
+- HDZero VTX will still become hot even on P1mW mode. It is better to keep VTX on 0mW when it will be idle for a while though the receiver will not have live video on this mode.
 
 - Use sticks shortcut to enter 0mW, and to exit 0mW mode.
 :::
@@ -201,7 +197,7 @@ Notes:
 - TEAM_RACE: OFF
 - SHORTCUT: OPT_A
 
-  - When you are waiting for ARM command from race director, Use Stick Command (OPT-A  /  \) to enter into 0mW to avoid VTX overheats, no video in goggle
+  - When you are waiting for ARM command from race director, Use Stick Command (OPT-A  /  \\) to enter into 0mW to avoid VTX overheats, no video in goggle
   - Right before ARM command from director, use Stick Command (OPT-A  \ /) to exit 0mW, you will have video in Goggle right away.
 ### Typical Setting for Team Racing
 
@@ -213,7 +209,7 @@ Notes:
 - TEAM_RACE: MODE1
 - SHORTCUT: OPT_A
 
-  - When VTX boots up, it is on 0mW. It will start to transmit when armed or Stick Command (OPT-A \ /) exit 0mW
+  - When VTX boots up, it is on 0mW. It will start to transmit when using Stick Command (OPT-A \ /) to exit 0mW
   - When you crash during the race, your VTX might continue transmitting, which will interference your teammate’s video signal that is on the same channel as yours, you need to
     - Disarm, and use Stick Command (OPT-A  /  \) to enter into 0mW, this will work only when your FC still functions,
     - VTX will automatically switch to 0mW after several seconds if VTX fails to communicate with FC (FC could be dead because of crash)
